@@ -9,7 +9,7 @@ public class Singleton {
         slowdown();
     }
 
-    public static Singleton getInstance() {
+    public static synchronized Singleton getInstance() {
         if (singleton == null) { // 처음 호출되는지 검사
             singleton = new Singleton();
         }
@@ -18,7 +18,7 @@ public class Singleton {
 
     private void slowdown() {
         try {
-            Thread.sleep(1000);  // CPU를 내놓고 쉼
+            Thread.sleep(1000);  // CPU를 내놓고 1초 쉼
         } catch (InterruptedException e) {
         }
     }

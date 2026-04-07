@@ -1,6 +1,6 @@
-package ch06.Sample;
+package practice.ch06;
 
-import ch06.Sample.framework.Product;
+import practice.ch06.framework.Product;
 
 public class UnderlinePen implements Product {
     private char ulchar;

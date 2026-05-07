@@ -1,4 +1,4 @@
-package ch17.Sample;
+package practice.ch17;
 
 public class GraphObserver implements Observer {
     @Override
@@ -10,7 +10,7 @@ public class GraphObserver implements Observer {
         }
         System.out.println("");
         try {
-            Thread.sleep(100);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
         }
     }

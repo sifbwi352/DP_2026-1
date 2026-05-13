@@ -41,8 +41,12 @@ public class FrameObserver extends Frame implements Observer, ActionListener {
         public void paint(Graphics g) {
             int width = getWidth();
             int height = getHeight();
+
+            // 흰색 원
             g.setColor(Color.white);
             g.fillArc(0, 0, width, height, 0, 360);
+            
+            // 빨간색 원호
             g.setColor(Color.red);
             g.fillArc(0, 0, width, height, 90, - number * 360 / 50);
         }

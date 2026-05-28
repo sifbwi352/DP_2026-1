@@ -43,11 +43,12 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
         System.out.println("mouseMoved: " + e.getPoint());
     }
 
+    //커맨드 패턴의 핵심
     @Override
     public void mouseDragged(MouseEvent e) {
-        Command cmd = new DrawCommand(canvas, e.getPoint());
+        Command cmd = new DrawCommand(canvas, e.getPoint());  // 그리기 명령 객체 생성
         history.append(cmd);
-        cmd.execute();
+        cmd.execute();  // 그리기 명령 실행
     }
 
     // WindowListener용 
